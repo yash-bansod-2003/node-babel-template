@@ -1,13 +1,11 @@
-
-class customErrorHandler {
+class CustomErrorHandler {
     constructor(status, message) {
         this.status = status;
         this.message = message;
     }
 
     static serverError(message = 'internal server error') {
-        return new customErrorHandler(500, message);
+        return new CustomErrorHandler(500, message);
     }
 }
-
-export default customErrorHandler;
+export { CustomErrorHandler };
